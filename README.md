@@ -15,14 +15,14 @@ The Risk Driver Analysis page is designed for deep-dive exploration. It features
 The foundation of this dashboard is a robust, multi-step data preparation pipeline built with Python (Pandas).
 
 Data Source & Initial Format
-The dataset used for this project is the Lending Club Loan Data on Kaggle. The full dataset is provided in the .feather format, a fast, binary format that is not directly readable by Power BI. The first step was to convert this data into a usable .csv format.
+The dataset used for this project is the Lending Club Loan Data on Kaggle . The full dataset is provided in the .feather format, a fast, binary format that is not directly readable by Power BI. The first step was to convert this data into a usable .csv format.
+
+Dataset Link : "https://www.kaggle.com/datasets/marcusos/lending-club-clean"
 
 Step 1: Data Conversion (.feather to .csv)
 A Python script was used to read the large .feather file and convert it into a standard CSV format.
 
-<details>
-<summary>Click to view Data Conversion Python Script</summary>
-
+#*******************************************  Copy Below Code *********************************************************************
 import pandas as pd
 
 # The name of the file you want to convert
@@ -56,13 +56,12 @@ except FileNotFoundError:
 except Exception as e:
     print(f"An unexpected error occurred: {e}")
 
-</details>
+#******************************************************************************************************************************************************
 
 Step 2: Data Cleaning & Feature Engineering
 Once in CSV format, the data was processed to clean inconsistencies, correct data types, prune irrelevant columns, and engineer new, high-value features critical for the analysis.
 
-<details>
-<summary>Click to view Data Cleaning & Feature Engineering Python Script</summary>
+#******************************************************************* Copy Code Below *****************************************************************
 
 import pandas as pd
 import numpy as np
@@ -153,12 +152,12 @@ def refine_and_engineer_features():
 if __name__ == "__main__":
     refine_and_engineer_features()
 
-</details>
+#*******************************************************************************************************************************************************************************8
 
 Step 3: Final Cleaned Dataset
 For ease of use and to allow others to replicate the analysis, the final, analysis-ready CSV file (lending_club_analysis_ready.csv) is provided in this repository.
 
-Click here to download the cleaned dataset
+Click here to download the cleaned dataset : "https://github.com/rushibedre/Credit-Risk-Analysis-Power-BI/blob/main/lending_club_analysis_ready.csv"
 
 ► Key Features & Analytics
 Executive KPIs: Monitors Total Portfolio Value ($16.08bn), Loan Volume (10.4M), Overall Default Rate (11.51%), and Average Borrower FICO Score (704).
@@ -172,7 +171,7 @@ Interactive Root Cause Analysis: An AI-powered Decomposition Tree allows users t
 'What-If' Scenario Modeling: A dynamic simulation tool that allows executives to model the financial impact of changing the minimum FICO score for lending. This feature directly links analytics to business strategy and quantifies potential savings (e.g., $1.94bn at an 800 FICO minimum).
 
 ► Technical Stack
-Data Cleaning & Feature Engineering: Python (Pandas)
+Data Cleaning & Feature Engineering: Python (Pandas/Numpy/Pyspark)
 
 Data Visualization & BI: Microsoft Power BI
 
@@ -186,3 +185,9 @@ LinkedIn: https://www.linkedin.com/in/rushikesh-bedre/
 GitHub: https://github.com/rushibedre
 
 Email: rushibedre10@gmail.com
+
+
+
+
+
+Thank You EveryOne.................😎
